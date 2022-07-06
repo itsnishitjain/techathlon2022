@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a class="logo" href="index.html">CW</a>
+      </div>
+      <nav>
+        <ul class="mainmenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Play</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </header>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Play</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="form-container">
+      <form class="form">
+        <h1 class="form-title">Login</h1>
+        <div class="form-group">
+          <input
+            style="color: white; width: 20rem"
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="Email"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            style="color: white; width: 20rem"
+            type="password"
+            id="password"
+            name="password"
+            class="form-input"
+            placeholder="Password"
+          />
+        </div>
+        <a class="register-login" href="#">Not registered? Sign up <u>here</a>
+        <button type="submit" class="form-button">Login</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

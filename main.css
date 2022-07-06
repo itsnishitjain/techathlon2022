@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  transition: 0.5s ease 0s;
+}
+
+@font-face {
+  font-family: jokerman;
+  src: url(./fonts/Jokerman-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)),
+    radial-gradient(circle, transparent 20%, black 150%),
+    url(./assets/cool-background.png);
+  background-color: #03080f;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+li,
+a,
+button {
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5vh 10%;
+
+  transition: background-color 0.5s ease;
+}
+
+.logo-container {
+  width: max(250px, 15%);
+  margin-right: auto;
+}
+
+.logo-container .logo {
+  cursor: pointer;
+  font-family: jokerman;
+  font-size: 4vh;
+}
+
+.mainmenu {
+  list-style: none;
+}
+
+.mainmenu li {
+  display: inline-block;
+  padding: 0px 30px;
+  transition: transform 0.3s ease 0s;
+}
+
+.mainmenu li:hover {
+  transform: translate(0px, -2px);
+}
+
+.mainmenu li a {
+  color: #03080f;
+  font-size: 2vh;
+  transition: all 0.3s ease 0s;
+}
+
+.section-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 5vh;
+  padding: 15vh 20vh;
+  max-width: 60%;
+}
+
+.section-one .section-text {
+  text-align: left;
+  color: black;
+}
+
+.section-text .title {
+  font-family: "Inter", sans-serif;
+  color: #e2e2e2;
+  font-weight: 700;
+  font-size: 3.5em;
+  line-height: 130%;
+  margin-bottom: 3vh;
+}
+
+.small-span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #e6e9ed;
+  margin-bottom: 10vh;
+}
+
+.imgcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-left: 69%;
+}
+
+.rules {
+  margin-left: 2vh;
+}
+
+.rules li {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #e6e9ed;
+  margin-bottom: 3vh;
+}
+
+.upperimg {
+  margin-top: 28vh;
+  transform: scale(1.4, 1.4);
+}
+
+@media screen and (max-width: 680px) {
+  .section-text .title {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .section-text .title {
+    font-size: 4vw;
+  }
+  .small-span {
+    font-size: 2vw;
+  }
+  .rules li {
+    font-size: 2vw;
+  }
+  .upperimg {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .section-one {
+    max-width: 69%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-one {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .imgcontainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .imgcontainer {
+    margin-left: 65%;
+  }
+  .upperimg {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  background-color: white;
+  padding-top: 140px;
+  transition: 1s;
+}
+
+.mobile-nav ul {
+  list-style: none;
+}
+
+.mobile-nav a {
+  font-size: 2rem;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.hamnav {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  font-size: 60px;
+  font-family: "Work Sans", sans-serif;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.hamnav:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainmenu {
+    display: none;
+  }
+
+  .log-btn {
+    display: none;
+  }
+}
