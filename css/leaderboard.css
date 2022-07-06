@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: jokerman;
-  src: url(./fonts/Jokerman-Regular.ttf);
+  src: url(../fonts/Jokerman-Regular.ttf);
 }
 
 html {
@@ -20,7 +20,7 @@ html {
 body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)),
     radial-gradient(circle, transparent 20%, black 150%),
-    url(./assets/cool-background.png);
+    url(../assets/cool-background.png);
   background-color: #03080f;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ button {
 
 header {
   z-index: 100;
-  position: fixed;
+  position: sticky;
   width: 100%;
   background-color: white;
 
@@ -82,108 +82,22 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-.section-one {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  margin-top: 5vh;
-  padding: 15vh 20vh;
-  max-width: 60%;
+table {
+  border-collapse: collapse;
+  width: 80%;
+  border-radius: 50px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px rgb(255, 255, 255);
+  margin: 10vh auto;
 }
 
-.section-one .section-text {
-  text-align: left;
-  color: black;
-}
-
-.section-text .title {
-  font-family: "Inter", sans-serif;
-  color: #e2e2e2;
-  font-weight: 700;
-  font-size: 3.5em;
-  line-height: 130%;
-  margin-bottom: 3vh;
-}
-
-.small-span {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 150%;
-  color: #e6e9ed;
-  margin-bottom: 10vh;
-}
-
-.imgcontainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  margin-left: 69%;
-}
-
-.rules {
-  margin-left: 2vh;
-}
-
-.rules li {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 150%;
-  color: #e6e9ed;
-  margin-bottom: 3vh;
-}
-
-.upperimg {
-  margin-top: 28vh;
-  transform: scale(1.4, 1.4);
-}
-
-@media screen and (max-width: 680px) {
-  .section-text .title {
-    font-size: 1.9rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .section-text .title {
-    font-size: 4vw;
-  }
-  .small-span {
-    font-size: 2vw;
-  }
-  .rules li {
-    font-size: 2vw;
-  }
-  .upperimg {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .section-one {
-    max-width: 69%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .section-one {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .imgcontainer {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .imgcontainer {
-    margin-left: 65%;
-  }
-  .upperimg {
-    transform: scale(1.2, 1.2);
-  }
+td,
+th {
+  color: white;
+  border-radius: 50px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 3vh;
 }
 
 .hamburger {

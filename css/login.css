@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   transition: 0.5s ease 0s;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: jokerman;
-  src: url(./fonts/Jokerman-Regular.ttf);
+  src: url(../fonts/Jokerman-Regular.ttf);
 }
 
 html {
@@ -20,7 +20,7 @@ html {
 body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)),
     radial-gradient(circle, transparent 20%, black 150%),
-    url(./assets/cool-background.png);
+    url(../assets/cool-background.png);
   background-color: #03080f;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ button {
 
 header {
   z-index: 100;
-  position: sticky;
+  position: fixed;
   width: 100%;
   background-color: white;
 
@@ -82,22 +82,99 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-table {
-  border-collapse: collapse;
-  width: 80%;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
   border-radius: 50px;
-  border-style: hidden;
-  box-shadow: 0 0 0 1px rgb(255, 255, 255);
-  margin: 10vh auto;
+  border: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 50vh;
+  padding: 5vh;
 }
 
-td,
-th {
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5vh;
   color: white;
+  margin-bottom: 5vh;
+}
+
+.form-group {
+  position: relative;
+  height: 5vh;
+  margin-bottom: 2.5vh;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #cfd8dc;
   border-radius: 50px;
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 3vh;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.form-input:hover {
+  border-color: #9dedff;
+}
+
+.form-input:focus {
+  border-color: #7bdff6;
+}
+
+::placeholder {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  color: white;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px 25px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  align-self: flex-end;
+  color: white;
+  margin-bottom: 3vh;
+}
+
+.form-button:hover {
+  transform: translate(0px, -2px);
+  background: white;
+  color: black;
+}
+
+.register-login {
+  padding-bottom: 10%;
+  color: white;
+}
+
+@media screen and (max-width: 680px) {
+  .section-text .title {
+    font-size: 1.9rem;
+  }
 }
 
 .hamburger {
